@@ -533,16 +533,44 @@ body {
 .footer {
     transition: background 0.3s;
 }
-#themeToggle{
-    background: var(--primary);
-    color: white;
-    padding: 0.5rem 1rem;
+#themeToggle {
+    background: none;
     border: none;
-    border-radius: 0.5rem;
     cursor: pointer;
-    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+#themeToggle svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#moonIcon {
+    display: none; /* Oculta la luna al inicio */
+}
+
+body.dark-mode #sunIcon {
+    display: none; /* Oculta el sol en modo oscuro */
+}
+
+body.dark-mode #moonIcon {
+    display: block; /* Muestra la luna en modo oscuro */
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    #themeToggle svg {
+        width: 20px;
+        height: 20px;
+    }
+}
 #themeToggle:hover{
     background: var(--primary-dark);
 }
