@@ -124,9 +124,4 @@ const body = document.body;
 
 themeToggle.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
-    if (body.classList.contains('dark-mode')) {
-        themeToggle.textContent = 'Modo Claro';
-    } else {
-        themeToggle.textContent = 'Modo Oscuro';
-    }
 });
