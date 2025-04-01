@@ -453,3 +453,96 @@ h3 {
         gap: 2rem;
     }
 }
+
+body.dark-mode {
+    --text: #d1d5db;
+    --text-light: #9ca3af;
+    --background: #111827;
+    --background-alt: #1f2937;
+    --border: #374151;
+}
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4{
+    color: white;
+}
+
+body.dark-mode .navbar{
+    background: rgba(20, 20, 20, 0.9);
+}
+
+body.dark-mode .hero{
+    background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+}
+
+body.dark-mode .service-card {
+    background: var(--background-alt);
+}
+
+body.dark-mode .process {
+    background: var(--background);
+}
+
+body.dark-mode .contact{
+    background: var(--background-alt);
+}
+
+body.dark-mode .contact-form{
+    background: var(--background-alt);
+}
+
+body.dark-mode .form-group input, body.dark-mode .form-group select, body.dark-mode .form-group textarea{
+    background: var(--background);
+}
+
+body.dark-mode .footer{
+    background: #000;
+}
+body {
+    transition: background 0.3s, color 0.3s;
+}
+
+.navbar {
+    transition: background 0.3s;
+}
+
+.hero {
+    transition: background 0.3s;
+}
+
+.service-card {
+    transition: all 0.3s, background 0.3s;
+}
+
+.process {
+    transition: background 0.3s;
+}
+
+.contact {
+    transition: background 0.3s;
+}
+
+.contact-form {
+    transition: background 0.3s;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    transition: all 0.3s, background 0.3s, color 0.3s;
+}
+
+.footer {
+    transition: background 0.3s;
+}
+#themeToggle{
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#themeToggle:hover{
+    background: var(--primary-dark);
+}
